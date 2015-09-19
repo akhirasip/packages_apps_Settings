@@ -18,7 +18,6 @@
 -keep class com.android.settings.cyanogenmod.*Settings
 -keep class com.koushikdutta.**
 -keep class com.android.settings.cyanogenmod.superuser.**
--keep class com.android.settings.xoplaxer.*
 -keep class com.android.settings.search.SettingsAutoCompleteTextView { *; }
 
 # Keep click responders
