@@ -39,4 +39,14 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
+
+    <!-- Partition Info -->
+    <string name="partition_info_title">Partition info</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
+
 </resources>
