@@ -222,7 +222,7 @@
   <string name="block_notifications_title">通知过滤</string>
   <string name="block_notifications_summary">管理已忽略的通知和过滤器</string>
   <string name="no_filters_title">没有设置过滤</string>
-  <string name="cmupdate_settings_title">CyanogenMod 更新</string>
+  <string name="cmupdate_settings_title">XoplaX 更新</string>
   <string name="update_recovery_title">更新 Cyanogen 恢复模式</string>
   <string name="update_recovery_summary">使用系统更新来更新恢复模式</string>
   <string name="update_recovery_on_warning">注意：启用此功能后，您已安装的恢复模式会被正在运行的系统所包含的恢复模式所替换。\n\n您的恢复模式会随着系统一起更新，以确保对未来版本的兼容性。\n\n您确定启用此功能？</string>
