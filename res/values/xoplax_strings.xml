@@ -49,4 +49,8 @@
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
 
+   <!-- Recent Tweaks -->
+   <string name="recents_show_membar_title">Memory bar</string>
+   <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
+
 </resources>
