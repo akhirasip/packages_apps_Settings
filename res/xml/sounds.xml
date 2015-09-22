@@ -139,5 +139,13 @@
                 android:dialogTitle="@string/vibrator_intensity_title"
                 android:persistent="false"
                 settings:advanced="true"/>
+
+	<!-- Advanced options -->
+        <PreferenceScreen
+                android:key="advanced_sound_settings"
+                android:title="@string/advanced_sound_title"
+                android:persistent="false"
+                android:fragment="com.android.settings.glade.SoundSettings" />
     </PreferenceCategory>
+
 </PreferenceScreen>
