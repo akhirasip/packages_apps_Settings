@@ -53,4 +53,8 @@
    <string name="recents_show_membar_title">Memory bar</string>
    <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
 
+   <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Superuser indicator</string>
+    <string name="su_indicator_summary">Show superuser indicator on status bar when a session is active</string>
+
 </resources>
