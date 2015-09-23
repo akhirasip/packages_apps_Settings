@@ -132,4 +132,7 @@
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Headset icon</string>
     <string name="show_headset_icon_summary">Shows icon when headsets are connected.</string>
+
+    <!-- Clock -->
+    <string name="status_bar_show_clock_second_title">Clock seconds</string>
 </resources>
