@@ -191,4 +191,9 @@
           android:summary="@string/status_bar_custom_header_summary"
           android:defaultValue="false"/>
 
+     <PreferenceScreen
+         android:id="@+id/listview"
+         android:fragment="com.android.settings.aogp.Listview"
+         android:title="@string/listview_category" />
+
 </PreferenceScreen>
