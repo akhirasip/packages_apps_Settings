@@ -34,6 +34,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.preference.SlimSeekBarPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
@@ -79,6 +80,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
     private static final String KEY_VOLUME_MUSIC_CONTROLS = "volbtn_music_controls";
     private static final String KEY_VOLUME_CONTROL_RING_STREAM = "volume_keys_control_ring_stream";
+
+    private static final String DIM_NAV_BUTTONS = "dim_nav_buttons";
+    private static final String DIM_NAV_BUTTONS_TIMEOUT = "dim_nav_buttons_timeout";
+    private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
+    private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
+    private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -139,6 +146,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mVolumeRockerWake;
 
     private PreferenceCategory mNavigationPreferencesCat;
+
+    SwitchPreference mDimNavButtons;
+    SlimSeekBarPreference mDimNavButtonsTimeout;
+    SlimSeekBarPreference mDimNavButtonsAlpha;
+    SwitchPreference mDimNavButtonsAnimate;
+    SlimSeekBarPreference mDimNavButtonsAnimateDuration;
 
     private Handler mHandler;
 
@@ -245,6 +258,33 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 mVolumeWakeScreen.setDisableDependentsState(true);
             }
         }
+	mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
+        mDimNavButtons.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsTimeout = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_TIMEOUT);
+        mDimNavButtonsTimeout.setDefault(3000);
+        mDimNavButtonsTimeout.isMilliseconds(true);
+        mDimNavButtonsTimeout.setInterval(1);
+        mDimNavButtonsTimeout.minimumValue(100);
+        mDimNavButtonsTimeout.multiplyValue(100);
+        mDimNavButtonsTimeout.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAlpha = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ALPHA);
+        mDimNavButtonsAlpha.setDefault(50);
+        mDimNavButtonsAlpha.setInterval(1);
+        mDimNavButtonsAlpha.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAnimate = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE);
+        mDimNavButtonsAnimate.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAnimateDuration = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE_DURATION);
+        mDimNavButtonsAnimateDuration.setDefault(2000);
+        mDimNavButtonsAnimateDuration.isMilliseconds(true);
+        mDimNavButtonsAnimateDuration.setInterval(1);
+        mDimNavButtonsAnimateDuration.minimumValue(100);
+        mDimNavButtonsAnimateDuration.multiplyValue(100);
+        mDimNavButtonsAnimateDuration.setOnPreferenceChangeListener(this);
+
     }
 
     private static Map<String, String> getPreferencesToRemove(ButtonSettings settings,
