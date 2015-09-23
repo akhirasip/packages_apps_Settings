@@ -180,4 +180,9 @@
             android:summary="@string/recents_show_membar_summary"
             android:defaultValue="false" />
 
+     <PreferenceScreen
+            android:key="lockscreen_colors"
+            android:title="@string/lockscreen_colors"
+            android:fragment="com.android.settings.rr.LockscreenColors" />
+
 </PreferenceScreen>
