@@ -124,4 +124,12 @@
     <string name="notification_title">Notification panel</string>
     <string name="status_bar_custom_header_title">Custom header image</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+
+    <!-- CP Stuff -->
+    <string name="default_string">Default</string>
+    <string name="reset">Reset</string>
+
+    <!-- Headphones icon switch -->
+    <string name="show_headset_icon_title">Headset icon</string>
+    <string name="show_headset_icon_summary">Shows icon when headsets are connected.</string>
 </resources>

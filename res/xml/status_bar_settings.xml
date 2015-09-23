@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
      Copyright (C) 2014-2015 The CyanogenMod Project
+     Copyright (C) 2015 Xoplax OS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -63,5 +64,12 @@
         android:title="@string/status_bar_notif_count_title"
         android:summary="@string/status_bar_notif_count_summary"
         android:defaultValue="false" />
+
+     <!-- Headset icon switch -->
+     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="show_headset_icon"
+            android:title="@string/show_headset_icon_title"
+            android:summary="@string/show_headset_icon_summary"
+            android:defaultValue="true" />
 
 </PreferenceScreen>
