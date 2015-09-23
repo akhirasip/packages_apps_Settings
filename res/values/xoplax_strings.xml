@@ -119,4 +119,9 @@
     <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
     <string name="yes">YES</string>
+
+    <!--Time Contexual Header -->
+    <string name="notification_title">Notification panel</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
 </resources>
