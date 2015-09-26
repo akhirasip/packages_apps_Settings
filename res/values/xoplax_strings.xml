@@ -157,4 +157,13 @@
     <string name="listview_overshoot_interpolator">overshoot_interpolator</string>
     <string name="listview_anticipate_overshoot_interpolator">anticipate_overshoot_interpolator</string>
     <string name="listview_bounce_interpolator">bounce_interpolator</string>   
+
+    <!-- Volume pane timeout -->
+    <string name="volume_panel_time_out_title">Volume panel timeout</string>
+    <string name="volume_panel_time_out_summary">Hide before <xliff:g id="number">%d</xliff:g> seconds. Auto hide on touch outside</string>
+    <string name="volume_panel_time_out_3sec">3 seconds (default)</string>
+    <string name="volume_panel_time_out_5sec">5 seconds</string>
+    <string name="volume_panel_time_out_8sec">8 seconds</string>
+    <string name="volume_panel_time_out_12sec">12 seconds</string>
+    <string name="volume_panel_time_out_15sec">15 seconds</string>
 </resources>
