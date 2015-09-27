@@ -104,7 +104,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
-    private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_time_out";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -123,7 +122,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mTapToWake;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
     private SwitchPreference mProximityWakePreference;
-    private ListPreference mVolumePanelTimeOut;
 
     private CMHardwareManager mHardware;
 
@@ -275,22 +273,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
 
         initPulse((PreferenceCategory) findPreference(KEY_CATEGORY_LIGHTS));
-
-	mVolumePanelTimeOut = (ListPreference) findPreference(KEY_VOLUME_PANEL_TIMEOUT);
-        mVolumePanelTimeOut.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                int volumePanelTimeOut = Integer.valueOf((String) newValue);
-                updateVolumePanelTimeOutSummary(volumePanelTimeOut);
-                return Settings.System.putInt(getContentResolver(),
-                        Settings.System.VOLUME_PANEL_TIMEOUT,
-                        volumePanelTimeOut);
-            }
-        });
-        final int volumePanelTimeOut = Settings.System.getInt(getContentResolver(),
-                Settings.System.VOLUME_PANEL_TIMEOUT, 3000);
-        mVolumePanelTimeOut.setValue(String.valueOf(volumePanelTimeOut));
-        updateVolumePanelTimeOutSummary(volumePanelTimeOut);
     }
 
     private int getDefaultDensity() {
@@ -454,12 +436,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
-    }
-
-    private void updateVolumePanelTimeOutSummary(int value) {
-        String summary = getResources().getString(R.string.volume_panel_time_out_summary,
-                value / 1000);
-        mVolumePanelTimeOut.setSummary(summary);
     }
 
     @Override
