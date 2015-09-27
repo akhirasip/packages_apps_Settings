@@ -42,6 +42,12 @@
                     android:targetClass="com.android.settings.liquid.extrainfo.MainActivity" />
         </PreferenceScreen>
 
+	<!-- Devices and Maintainers -->
+        <PreferenceScreen
+            android:key="devices"
+            android:title="@string/device_maintainers_title"
+            android:fragment="com.android.settings.crdroid.Devices" />
+
         <!-- CyanogenMod Updates -->
         <PreferenceScreen android:key="cm_updates"
                 android:title="@string/cmupdate_settings_title"
